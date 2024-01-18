@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply transition-all duration-300 ease-linear
+}
+
+#home_ul,
+#service_ul,
+#blog_ul {
+    transform: perspective(300px) rotateX(-18deg);
+    opacity: 0;
+    visibility: hidden;
+}
+
+#pages_ul {
+    transform: perspective(300px) rotateX(-18deg);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+}
+
+#pages:hover #pages_ul {
+    transform: perspective(300px) rotateX(0deg);
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+#home:hover #home_ul,
+#service:hover #service_ul,
+#blog:hover #blog_ul {
+    transform: perspective(300px) rotateX(0deg);
+    opacity: 1;
+    visibility: visible;
+}
+
+#footerBtn {
+    background-image: linear-gradient(260.16deg, #1C99FE 9.94%, #7644FF 54.82%, #FD4766 95.56%);
+}
+
+#footerBtn:hover {
+    background-position: 100% 50%;
+    color: #fff;
+    text-decoration: none;
+}
